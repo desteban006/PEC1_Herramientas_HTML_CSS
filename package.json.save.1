@@ -1,0 +1,19 @@
+cd{
+  "name": "desteban006",
+  "description": "",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean parcel:build",
+    "parcel:dev": "parcel",
+    "parcel:build": "parcel build",
+    "clean": "rimraf dist .parcel-cache"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
