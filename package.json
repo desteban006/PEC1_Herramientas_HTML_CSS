@@ -1,0 +1,33 @@
+{
+  "name": "PEC1",
+  "description": "",
+  "source": "src/index.html",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean parcel:build",
+    "parcel:dev": "parcel",
+    "parcel:build": "parcel build",
+    "clean": "rimraf dist .parcel-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/desteban006/PEC1_Herramientas_HTML_CSS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/desteban006/PEC1_Herramientas_HTML_CSS.git",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel": "latest",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@gobistories/gobi-web-integration": "^6.13.6",
+    "tailwindcss": "^3.0.24"
+  }
+}

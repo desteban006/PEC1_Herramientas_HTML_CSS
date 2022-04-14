@@ -1,0 +1,748 @@
+/**Hoja de estilos Justice League**/
+
+:root {
+    --principal-color: rgb(0, 0, 0);
+    --secondary-color: rgb(189, 55, 0);
+    --light-color: rgb(255, 255, 255);
+    --bg-main: rgb(244, 244, 244);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1em;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+a.more-info {
+    color: var(--secondary-color);
+    border-bottom: 1px dotted var(--secondary-color);
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+a.more-info:hover {
+    text-decoration: none;
+    color: var(--principal-color);
+    border-color: var(--principal-color);
+}
+
+abbr {
+    text-decoration: none;
+}
+
+cite {
+    font-style: italic;
+    font-weight: 600;
+}
+
+strong {
+    font-weight: 600;
+}
+
+iframe {
+    border: 0;
+}
+
+figcaption p {
+    font-size: 1rem;
+}
+
+/*Clases aplicadas a los elementos multimedia del sitio */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-fluid {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+}
+
+.video-fluid-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/*Clase para esconder un elemento qu será únicamente visible a los lectores de pantalla*/
+.sr {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*Alineamineto de textos*/
+.text-center {
+    text-align: center;
+}
+
+/****************************
+Contenedores del sitio
+*****************************/
+main {
+    width: 100%;
+    background-color: var(--bg-main);
+}
+
+section {
+    padding: 50px 0;
+}
+
+header {
+    padding: 30px 0 10px 0;
+}
+
+footer {
+    padding: 30px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/****************************
+Contenidos del header
+*****************************/
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 900;
+    color: var(--principal-color);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1 a {
+    color: inherit;
+}
+
+h1 a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+p.lema {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    header {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    p.lema {
+        font-size: 1.1rem;
+    }
+}
+
+/****************************
+Menú de navegación del sitio
+*****************************/
+nav {
+    position: sticky;
+    top: 0;
+    /* que se mantenga fijado en la parte superior al desplazarse */
+    z-index: 1;
+    /* que quede por encima de los videos de youtube */
+    background: var(--light-color);
+    padding: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(13, 10, 44, 0.04);
+}
+
+nav ul {
+    text-transform: uppercase;
+    font-size: 1rem;
+    list-style-type: none;
+}
+
+nav li {
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+nav li a {
+    font-weight: 800;
+    color: var(--principal-color);
+}
+
+nav li a:hover {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+nav li.active a {
+    font-weight: 800;
+    color: var(--secondary-color);
+}
+
+@media (min-width: 992px) {
+    nav ul {
+        font-size: 1.2rem;
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: left;
+        margin-right: 30px;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+}
+
+/****************************
+Contenidos del footer
+*****************************/
+footer {
+    background-color: var(--principal-color);
+    color: var(--light-color);
+    font-size: 1.2rem;
+    position: relative;
+    text-align: center;
+}
+
+footer a {
+    color: var(--light-color);
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.footer ul.social li {
+    display: inline-block;
+}
+
+.footer ul.social li a:hover {
+    opacity: 0.7;
+}
+
+footer ul.legals {
+    padding-bottom: 0;
+}
+
+.footer p.credits {
+    font-size: 0.8rem;
+}
+
+.go-top {
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+    font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+    footer {
+        text-align: left;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer ul.legals li {
+        display: inline-block;
+    }
+
+    .footer ul.legals li::after {
+        content: "•";
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .footer ul.legals li:last-child::after {
+        content: "";
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/********************************
+Contenidos de la página de inicio
+*********************************/
+.hero-image {
+    height: 40vh;
+    text-align: center;
+    background-color: var(--principal-color);
+    background-size: auto;
+    color: var(--light-color);
+    display: flex;
+    align-items: center;
+}
+
+.hero-image p {
+    font-size: 2.5rem;
+}
+
+section.info p {
+    font-size: 1.3rem;
+}
+
+section.newsletter {
+    background: rgb(242, 232, 228);
+}
+
+div.news>div {
+    margin-bottom: 30px;
+}
+
+div.news time {
+    display: block;
+    padding: 15px 0;
+}
+
+div.news h3 a {
+    color: var(--secondary-color);
+}
+
+div.news h3 a:hover {
+    color: var(--principal-color);
+    text-decoration: none
+}
+
+form {
+    width: 90%;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form ul {
+    list-style-type: none;
+}
+
+form ul li {
+    margin-bottom: 1rem;
+}
+
+input {
+    border: 1px solid;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+input {
+    width: 99%;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+input[type="checkbox"]+label {
+    display: inline;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 15px;
+    padding: 15px 30px;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    border: none;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--principal-color);
+}
+
+.infoLegal,
+label[for="politica"] {
+    font-size: 0.65rem;
+}
+
+@media (min-width: 992px) {
+    .hero-image {
+        height: 50vh;
+    }
+
+    .hero-image p {
+        font-size: 5rem;
+    }
+
+    section.info p {
+        font-size: 2rem;
+        text-align: justify;
+    }
+
+    form {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    div.news {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.news>div {
+        width: 30%;
+    }
+
+    .form {
+        width: 90%;
+        padding-top: 15px;
+    }
+}
+
+/****************************
+Página sintomas.html
+*****************************/
+div.symptoms {
+    margin-top: 30px;
+}
+
+div.symptoms>article {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+div.symptoms img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+div.symptoms h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+div.symptoms p {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    div.symptoms.grid-container>article img {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    div.symptoms.grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 30px;
+    }
+
+    div.symptoms.grid-container>article:nth-child(odd) {
+        grid-column: 1 / span 2;
+    }
+
+    div.symptoms.grid-container>article:nth-child(even) {
+        grid-column: 2 / span 2;
+    }
+
+    div.symptoms.grid-container>article {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    div.symptoms.grid-container>article img {
+        height: 100%;
+        width: 50%;
+        object-fit: cover;
+        padding-right: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    div.symptoms-content {
+        width: 50%;
+    }
+
+    div.symptoms p {
+        text-align: justify;
+        hyphens: auto;
+    }
+}
+
+/****************************
+Página videos.html
+*****************************/
+
+
+/****************************
+Página cop26.html
+*****************************/
+.data dt {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.data dd {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+article.conf ol {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+article.conf ol li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+    article.conf ol li {
+        font-size: 1.1rem;
+    }
+
+    .data dd {
+        font-size: 1.1rem;
+    }
+}
+
+blockquote {
+    font-style: italic;
+    background-color: var(--light-color);
+    border-left: 5px solid var(--secondary-color);
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+article.conf h3,
+.data h3 {
+    margin-top: 2rem;
+}
+
+@media (min-width: 1200px) {
+    .grid-container-article {
+        display: grid;
+        grid-template-columns: 40% auto;
+        column-gap: 100px;
+    }
+
+    article {
+        text-align: justify;
+        hyphens: auto;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+.caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
