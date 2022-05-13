@@ -245,6 +245,7 @@ p.lema {
 Menú de navegación del sitio
 *****************************/
 nav {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     /* que se mantenga fijado en la parte superior al desplazarse */
@@ -573,7 +574,8 @@ div.symptoms p {
     div.symptoms.grid-container>article img {
         height: 100%;
         width: 50%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         padding-right: 15px;
         margin-top: 0;
         margin-bottom: 0;
@@ -585,7 +587,9 @@ div.symptoms p {
 
     div.symptoms p {
         text-align: justify;
-        hyphens: auto;
+        -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto;
     }
 }
 
@@ -647,12 +651,15 @@ article.conf h3,
     .grid-container-article {
         display: grid;
         grid-template-columns: 40% auto;
-        column-gap: 100px;
+        -moz-column-gap: 100px;
+             column-gap: 100px;
     }
 
     article {
         text-align: justify;
-        hyphens: auto;
+        -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto;
     }
 }
 
@@ -745,4 +752,80 @@ article.conf h3,
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+.hero-path{
+    text-align: center;
+}
+.superImagen{
+    display: inline;
+    clip-path: polygon(20% 20%, 80% 20%, 100% 40%, 50% 100%, 0 40%);
+    width: 20%;
+    height: 20%;
+    margin-right: 20px;
+}
+
+.legoBatman{
+    display: inline;
+    clip-path: polygon(0 15%, 20% 15%, 31% 31%, 41% 30%, 41% 14%, 46% 21%, 54% 21%, 59% 14%, 58% 30%, 68% 30%, 80% 15%, 100% 15%, 90% 50%, 50% 65%, 11% 51%);
+    width: 20%;
+    height: 20%;
+    margin-left: 20px;
+}
+
+#hero-battle{
+    display: inline;
+}
+
+
+
+path{
+    fill: none;
+    stroke: red;
+    animation: bounceIn 5s ease forwards, beat 1s ease-in-out 6s 10;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes bounceIn{
+    from{
+        fill:transparent;
+    }
+    to{
+        stroke-dashoffset: 0;
+         fill: red;
+    }
+}
+
+@keyframes beat{
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.97);
+    }
+    35% {
+        transform: scale(0.9);
+    }
+    45% {
+        transform: scale(1.1);
+    }
+    55% {
+        transform: scale(0.9);
+    }
+    65% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+picture{
+    max-width: auto;
+    object-fit:fill;
 }
